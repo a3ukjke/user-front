@@ -29,14 +29,15 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: ls -la
+    
     - name: Heroku Build
       uses: behe/heroku-build@v1.1      
       with:
-        heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-    # Email from Heroku Account
-        heroku_email: aazamatkaz@gmail.com
+        api_key: ${{ secrets.HEROKU_API_KEY }}
     # The appname to use for deploying/updating
-        heroku_app_name: user-front-app    
+        app_name: user-front-app   
+        
+        
     - name: Heroku Action
       uses: CDNievas/heroku-action@v1.0
       with:
