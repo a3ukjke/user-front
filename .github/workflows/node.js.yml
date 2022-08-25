@@ -37,5 +37,3 @@ jobs:
         heroku_email: aazamatkaz@gmail.com
     # The appname to use for deploying/updating
         heroku_app_name: user-front-app
-    # The branch that you would like to deploy to Heroku
-        branch: master
